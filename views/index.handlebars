@@ -1,0 +1,23 @@
+             <h1>Messages</h1>
+              <ul class="message-list">
+                  {{#messages}}
+                  <li class="message-list-item">
+                      <div class="message-list-item__author">
+                          {{author}}
+                      </div>
+                  </li>
+                  {{/messages}}
+              </ul>
+              <form action="/login" method="post" id="messageForm">
+                  <div class="form-row">
+                      <label for="messageAuthor">Author</label>
+                      <input type="text" name="author" id="messageAuthor" placeholder="Hier bitte einen Namen eingeben...">
+                  </div>
+                     <div class="form-validation">
+                          <span class="error" id="validationError" style="display: none">Author und Text dürfen nicht leer sein.</span>
+                      </div>
+                      <div class="form-controls">
+                          <button id="sendButton" type="submit">Senden</button>
+                      </div>
+              </form>
+              <script type="application/javascript" src="script.js"></script>
